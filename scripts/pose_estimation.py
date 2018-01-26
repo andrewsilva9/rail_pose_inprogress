@@ -256,6 +256,6 @@ class PoseMachine:
         for person in people:
             i = 0
             for key, val in person.iteritems():
-                cv.circle(canvas, (int(val[0]), int(val[1])), 5, colors[i], thickness=-1)
+                cv.circle(canvas, (int(val[0]), int(val[1])), 5, colors[model['part_str'].index(key)], thickness=-1)
                 i += 1
         return canvas
